@@ -15,7 +15,7 @@ function RandomQuote() {
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] =useState(true);
 
-  const getData = async (url, array) => {
+  const getData = async (url, array) => {  // quote:{} | quotes:[]
     try {
       setLoading(true);
       if (array) {
@@ -48,9 +48,7 @@ function RandomQuote() {
   };
 
   const handleTheme = () => {
-    
     setTheme(!theme);
-    
   }
 
   useEffect(getQuote, []);
@@ -67,7 +65,7 @@ function RandomQuote() {
     >
       <div className="btn" style={{color: theme ? '' : '#ff5555'}}>
         <div className="btn--theme" onClick={handleTheme}>
-          { theme ? (
+          { theme ? (  // check theme
             <WbSunnyIcon fontSize='large'/>
           ) : (
               <Brightness2Icon fontSize='large' />
@@ -77,7 +75,7 @@ function RandomQuote() {
           random <LoopIcon />
         </div>
       </div>
-      {loading ? (
+      {loading ? ( // check call api
         <div style={{color: theme ? '' : '#ff5555'}}> 
           <Loading />
         </div>
