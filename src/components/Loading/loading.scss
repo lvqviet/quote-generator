@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('https://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.woff?-9haulc')
+    format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: 'icomoon';
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spinner-2:before {
+  content: '\e001';
+}
+
+@keyframes anim-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  display: inline-block;
+  font-size: 4em;
+  height: 1em;
+  line-height: 1;
+  margin: auto;
+  animation: anim-rotate 2s infinite linear;
+  color: black;
+  /* text-shadow: 0 0 0.25em black; */
+}
+.spinner--steps {
+  animation: anim-rotate 1s infinite steps(8);
+}
+.spinner--steps2 {
+  animation: anim-rotate 1s infinite steps(12);
+}
+
+/* body {
+  font-family: sans-serif;
+  color: black;
+  line-height: 1.5;
+  font-size: 1em;
+  background: white;
+} */
+.talign-center {
+  text-align: center;
+  width: 100%;
+  min-height: 84vh;
+  display: flex;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s;
+}
+a:hover,
+a:active {
+  color: #ccc;
+}
+footer {
+  margin-top: 2em;
+}

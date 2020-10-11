@@ -1,0 +1,23 @@
+.quote {
+  padding: 0 0 0 40px;
+  width: 65%;
+  text-align: left;
+  margin: 100px auto;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 120%;
+  border-left: 8px solid #f7df94;
+  border-radius: 10px;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    padding: 0 80px;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    padding: 0 50px;
+    font-size: 24px;
+  }
+}
