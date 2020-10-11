@@ -1,5 +1,6 @@
 body {
   font-family: Raleway;
+  color: #333333;
 }
 
 .container {
@@ -16,7 +17,7 @@ body {
 
 .btn {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   &--random {
     display: flex;
     align-items: center;
@@ -30,10 +31,23 @@ body {
     border: none;
     border-radius: 1rem;
     cursor: pointer;
-    color: #333333;
+    // color: #333333;
     background: transparent;
     transition: background 100ms;
   }
+  &--theme {
+    margin-left: 30px;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: transparent;
+    transition: background 100ms;
+  }
+}
+
+.btn--theme:hover {
+  background-color: #f7df9477;
 }
 
 .btn--random:hover {
@@ -49,7 +63,7 @@ h1 {
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
-  color: #333333;
+  // color: #333333;
   @media (max-width: 1024px) {
     width: 80%;
     padding: 0 80px;
