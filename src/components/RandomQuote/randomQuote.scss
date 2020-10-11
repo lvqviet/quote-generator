@@ -55,7 +55,6 @@ body {
 }
 
 h1 {
-  padding: 0 100px;
   width: 45%;
   margin: auto;
   margin-top: 40px;
@@ -66,10 +65,10 @@ h1 {
   // color: #333333;
   @media (max-width: 1024px) {
     width: 80%;
-    padding: 0 80px;
+    padding: 0 1rem;
   }
   @media (max-width: 600px) {
     width: 90%;
-    padding: 0 50px;
+    padding: 0 1rem;
   }
 }

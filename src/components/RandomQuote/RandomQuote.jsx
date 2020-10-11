@@ -24,7 +24,6 @@ function RandomQuote() {
       } else {
         const res = await Axios.get(url);
         setQuote(res.data.quote);
-        console.log(res.data.quote);
       }
       setLoading(false);
     } catch (error) {
@@ -63,7 +62,7 @@ function RandomQuote() {
         transition: '150ms'
       }}
     >
-      <div className="btn" style={{color: theme ? '' : '#ff5555'}}>
+      <div className="btn" style={{color: theme ? '' : 'white'}}>
         <div className="btn--theme" onClick={handleTheme}>
           { theme ? (  // check theme
             <Brightness2Icon fontSize='large'/>
@@ -83,8 +82,8 @@ function RandomQuote() {
       ) : (
         <div className="container">
           {quotes.length ? (
-            <div style={{color: theme ? '' : '#ff5555'}}>
-              <h1 >{quotes[0].quoteAuthor}</h1>
+            <div style={{color: theme ? '' : 'white'}}>
+              <h1 style={{color: theme ? '' : '#ff5555'}}>{quotes[0].quoteAuthor}</h1>
               {quotes.map(quote => (
                 <Quote 
                 key={quote._id} 
@@ -95,7 +94,7 @@ function RandomQuote() {
           ) : (
             <div 
             className="content"
-            style={{color: theme ? '' : '#ff5555'}}
+            style={{color: theme ? '' : 'white '}}
             >
               <Quote quote={quotes.quoteText} />
               <Author
