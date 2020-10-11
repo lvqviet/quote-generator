@@ -15,7 +15,7 @@ function RandomQuote() {
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] =useState(true);
 
-  const getData = async (url, array) => {  // quote:{} | quotes:[]
+  const getData = async (url, array) => {  // quote:{} || quotes:[]
     try {
       setLoading(true);
       if (array) {
