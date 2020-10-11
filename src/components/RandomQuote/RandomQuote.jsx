@@ -66,16 +66,16 @@ function RandomQuote() {
       <div className="btn" style={{color: theme ? '' : '#ff5555'}}>
         <div className="btn--theme" onClick={handleTheme}>
           { theme ? (  // check theme
-            <WbSunnyIcon fontSize='large'/>
+            <Brightness2Icon fontSize='large'/>
           ) : (
-              <Brightness2Icon fontSize='large' />
+              <WbSunnyIcon fontSize='large' />
           )}
         </div>
         <div className="btn--random" onClick={getQuote}>
           random <LoopIcon />
         </div>
       </div>
-      {loading ? ( // check call api
+      {loading ? ( // check waiting for call api
         <div style={{color: theme ? '' : '#ff5555'}}> 
           <Loading />
         </div>
