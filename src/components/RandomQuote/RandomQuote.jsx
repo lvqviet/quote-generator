@@ -13,7 +13,7 @@ import './randomQuote.scss';
 function RandomQuote() {
   const [quotes, setQuote] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] =useState(true);
+  const [theme, setTheme] =useState(true);  // false => dark mode
 
   const getData = async (url, array) => {  // quote:{} | quotes:[]
     try {
@@ -67,7 +67,7 @@ function RandomQuote() {
           { theme ? (  // check theme
             <Brightness2Icon fontSize='large'/>
           ) : (
-              <WbSunnyIcon fontSize='large' />
+                <WbSunnyIcon fontSize='large' />
           )}
         </div>
         <div className="btn--random" onClick={getQuote}>

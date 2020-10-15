@@ -4,15 +4,35 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 function Author({ author, genre, theme, onClick }) {
   return (
-    <div 
+    <div>
+      {theme ? (
+        <div 
     className="author" 
     onClick={onClick}
-    style={{
-      color: theme ? '' : '#ff5555',
-    }}
     >
       <div>
-        <h3 style={{color: theme ? '' : '#ff5555'}}>
+        <h3 >
+          {author}
+        </h3>
+        <p>{genre}</p>
+      </div>
+      
+        <ArrowRightAltIcon 
+        fontSize="large" 
+        style={{color: 'white'}}
+      />
+      </div>
+    ) : (
+      <div 
+      className="author__dark" 
+      onClick={onClick}
+      >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div>
+        <h3>
           {author}
         </h3>
         <p>{genre}</p>
@@ -22,8 +42,8 @@ function Author({ author, genre, theme, onClick }) {
         fontSize="large"
         style={{ color: theme ? 'white' : '#ff5555'}}
       />
-      
-      
+      </div>
+    )}
     </div>
   );
 }

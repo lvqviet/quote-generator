@@ -34,6 +34,10 @@ body {
     // color: #333333;
     background: transparent;
     transition: background 100ms;
+
+    &:hover {
+      background-color: #f7df9477;
+    }
   }
   &--theme {
     margin-left: 30px;
@@ -42,16 +46,12 @@ body {
     border-radius: 1rem;
     cursor: pointer;
     background: transparent;
-    transition: background 100ms;
+    transition: 500ms;
+
+    &:hover {
+      background-color: #f7df9477;
+    }
   }
-}
-
-.btn--theme:hover {
-  background-color: #f7df9477;
-}
-
-.btn--random:hover {
-  background-color: #f7df9477;
 }
 
 h1 {
