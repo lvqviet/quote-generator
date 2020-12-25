@@ -20,10 +20,12 @@ function RandomQuote() {
       setLoading(true);
       if (array) {
         const res = await Axios.get(url);
-        setQuote(res.data.quotes);
+        setQuote(res.data.data);
+        console.log(quotes);
       } else {
         const res = await Axios.get(url);
-        setQuote(res.data.quote);
+        setQuote(res.data.data[0]);
+        console.log(quotes);
       }
       setLoading(false);
     } catch (error) {
@@ -33,14 +35,14 @@ function RandomQuote() {
 
   const getQuote = () => {
     getData(
-      'https://quote-garden.herokuapp.com/api/v2/quotes/random',
+      'https://quote-garden.herokuapp.com/api/v3/quotes/random?limit=1',
       false
     );
   };
 
   const getQuotesByAuthor = () => {
     getData(
-      `https://quote-garden.herokuapp.com/api/v2/authors/${quotes.quoteAuthor}`,
+      `https://quote-garden.herokuapp.com/api/v3/quotes?author=${quotes.quoteAuthor}`,
       true
     );
     return;
